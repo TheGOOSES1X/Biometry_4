@@ -24,7 +24,7 @@ def Start_Program(Space):
             lower = np.array([0, 20, 70])
             upper = np.array([15, 255, 255])
 
-        elif Space == "YCbCr":
+        elif Space == "YCrCb":
             # Преобразование в цветовое пространство YCrCb
             color_space = cv2.cvtColor(img, cv2.COLOR_BGR2YCrCb)
             # Создание массивов для диапазона цветов
@@ -105,7 +105,7 @@ def Start_Program_HSV():
     Start_Program(space)
 
 def Start_Program_YCbCr():
-    space = "YCbCr"
+    space = "YCrCb"
     Start_Program(space)
 
 def Start_Program_I1I2I3():
@@ -126,7 +126,7 @@ button = tk.Button(root, text="HSV", command=Start_Program_HSV, height=1, width=
 button.pack(anchor=CENTER, pady = 10)
 button.pack()
 
-button = tk.Button(root, text="YCbCr", command=Start_Program_YCbCr, height=1, width=35)
+button = tk.Button(root, text="YCrCb", command=Start_Program_YCbCr, height=1, width=35)
 button.pack(anchor=CENTER, pady = 10)
 button.pack()
 
